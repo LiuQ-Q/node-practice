@@ -35,7 +35,7 @@ var userSchema = new Schema({
   },
   gender: {
     type: Number,
-    enum: [-1,0,1]
+    enum: [-1,0,1],
     default: -1
   },
   birthday: {
