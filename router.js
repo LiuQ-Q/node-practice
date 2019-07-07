@@ -92,11 +92,7 @@ router.post('/register', function (req, res) {
         err_code: 0,
         message: 'OK'
       })
-
-      // 服务端重定向至针对同步请求 异步请求无效
-      // res.redirect('/')
     })
-
   })
 })
 
@@ -104,7 +100,6 @@ router.post('/register', function (req, res) {
 router.get('/logout', function (req, res) {
   // 清楚登录状态
   req.session.user = null
-
   // 重定向到登录页
   res.redirect('/login')
 
