@@ -35,7 +35,6 @@ router.post('/login', function (req, res) {
       })
     }
 
-    // 用户存在 记录登录状态
     req.session.user = user
 
     return res.status(200).json({
@@ -46,13 +45,11 @@ router.post('/login', function (req, res) {
   })
 })
 
-/* 注册 */
 router.get('/register', function (req, res) {
   res.render('register.html')
 })
 router.post('/register', function (req, res) {
   var body = req.body
-  // console.log(body) ok
   User.findOne({
     $or: [
       {
@@ -70,7 +67,6 @@ router.post('/register', function (req, res) {
       })
     }
     if (data) {
-      // 邮箱或昵称已存在
       return res.status(200).json({
         err_code: 1,
         message: '邮箱或昵称已存在'
