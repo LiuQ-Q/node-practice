@@ -21,9 +21,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// 把路由挂在到 app 中
 app.use(router)
-
 
 app.listen(3000, function () {
   console.log('running...')

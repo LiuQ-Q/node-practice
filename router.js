@@ -81,7 +81,6 @@ router.post('/register', function (req, res) {
         })
       }
 
-      // 注册成功, 使用 Session 记录用户的登录状态
       req.session.user = user
 
       res.status(200).json({
@@ -94,9 +93,8 @@ router.post('/register', function (req, res) {
 
 /* 退出 */
 router.get('/logout', function (req, res) {
-  // 清楚登录状态
   req.session.user = null
-  // 重定向到登录页
+  
   res.redirect('/login')
 
 })
