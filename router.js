@@ -91,7 +91,6 @@ router.post('/register', function (req, res) {
   })
 })
 
-/* 退出 */
 router.get('/logout', function (req, res) {
   req.session.user = null
   
