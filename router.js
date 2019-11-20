@@ -77,7 +77,7 @@ router.post('/register', function (req, res) {
 			if (err) {
 				return res.status(500).json({
 					err_code: 500,
-					message: '数据库存储错误...'
+					message: '数据库存储错误'
 				})
 			}
 
