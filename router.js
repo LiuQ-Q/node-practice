@@ -48,6 +48,7 @@ router.post('/login', function (req, res) {
 router.get('/register', function (req, res) {
 	res.render('register.html')
 })
+
 router.post('/register', function (req, res) {
 	var body = req.body
 	User.findOne({
