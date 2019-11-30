@@ -67,6 +67,7 @@ router.post('/register', function (req, res) {
 				message: '服务端错误'
 			})
 		}
+		
 		if (data) {
 			return res.status(200).json({
 				err_code: 1,
